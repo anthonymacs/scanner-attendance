@@ -9,7 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+  public function up(): void
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
@@ -23,6 +23,7 @@ return new class extends Migration
             $table->foreignId('strand_id')->constrained()->onDelete('restrict'); // Link to strands table
             $table->foreignId('section_id')->constrained()->onDelete('restrict'); // Link to sections table
             $table->date('date_of_birth')->nullable();
+            $table->integer('age')->nullable(); // Age field added
             $table->enum('gender', ['Male', 'Female'])->nullable();
             $table->text('address')->nullable();
             $table->string('guardian_name')->nullable();
