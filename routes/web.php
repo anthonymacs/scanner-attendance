@@ -2,7 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-     Route::prefix("/")->group(function () {
-        Route::get('', \App\Livewire\Dashboard\HomePage::class)->name('dashboard.index');
-    });
+use App\Livewire\Auth\Login;
 
+
+Route::view('/', 'livewire.home.index')->name('home');
+
+Route::middleware('guest')->group(function () {
+    Route::get('/login', Login::class)->name('login');
+});
