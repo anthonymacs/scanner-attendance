@@ -10,8 +10,8 @@
             </div>
             
             <h1 class="hero-title">
-                Scan Anything,
-                <span class="gradient-text">Instantly</span>
+               Mary's Attendance
+                <span class="gradient-text">Scanner</span>
             </h1>
             
             <p class="hero-description">
@@ -25,7 +25,7 @@
                         <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2m0 10v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/>
                         <rect x="7" y="7" width="10" height="10" rx="1"/>
                     </svg>
-                    Start Scanning Now
+                    Sign Up
                 </button>
                 <button class="btn btn-secondary btn-large">
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -93,97 +93,7 @@
         </div>
     </section>
     
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="section-header">
-            <div class="section-badge">Features</div>
-            <h2 class="section-title">Everything You Need</h2>
-            <p class="section-description">Powerful features designed for speed, accuracy, and ease of use</p>
-        </div>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"/>
-                        <path d="m21 21-4.35-4.35"/>
-                    </svg>
-                </div>
-                <h3 class="feature-title">Multi-Format Support</h3>
-                <p class="feature-description">Scan QR codes, barcodes, Data Matrix, PDF417, and more. One app, unlimited possibilities.</p>
-                <div class="feature-list">
-                    <span class="feature-tag">QR Code</span>
-                    <span class="feature-tag">EAN/UPC</span>
-                    <span class="feature-tag">Code 128</span>
-                </div>
-            </div>
-            
-            <div class="feature-card featured">
-                <div class="featured-badge">Most Popular</div>
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                    </svg>
-                </div>
-                <h3 class="feature-title">Instant Recognition</h3>
-                <p class="feature-description">Advanced AI-powered scanning delivers results in milliseconds with industry-leading accuracy.</p>
-                <div class="feature-list">
-                    <span class="feature-tag">AI Powered</span>
-                    <span class="feature-tag">Real-time</span>
-                    <span class="feature-tag">99.9% Accurate</span>
-                </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                    </svg>
-                </div>
-                <h3 class="feature-title">Secure & Private</h3>
-                <p class="feature-description">Your scans are encrypted and stored securely. Complete privacy with optional cloud backup.</p>
-                <div class="feature-list">
-                    <span class="feature-tag">Encrypted</span>
-                    <span class="feature-tag">Private</span>
-                    <span class="feature-tag">Cloud Backup</span>
-                </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                    </svg>
-                </div>
-                <h3 class="feature-title">Batch Processing</h3>
-                <p class="feature-description">Scan multiple codes at once and export results in various formats for your workflow.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                        <polyline points="7 10 12 15 17 10"/>
-                        <line x1="12" y1="15" x2="12" y2="3"/>
-                    </svg>
-                </div>
-                <h3 class="feature-title">Easy Export</h3>
-                <p class="feature-description">Export scan history to CSV, JSON, or PDF. Integrate seamlessly with your tools.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                    </svg>
-                </div>
-                <h3 class="feature-title">Cross-Platform</h3>
-                <p class="feature-description">Access your scans on web, mobile, and desktop. Synced across all your devices.</p>
-            </div>
-        </div>
-    </section>
+   
     
     <!-- CTA Section -->
     <section class="cta-section">
@@ -207,11 +117,32 @@
 </div>
 
 <style>
-    /* Hero Section */
-    .homepage {
-        padding-bottom: 4rem;
+    /* Modern Design Tokens - Matching Login Page */
+    :root {
+        --primary: #2563eb;
+        --primary-hover: #1d4ed8;
+        --bg-dark: #0f172a;
+        --bg-card: #1e293b;
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        --text-tertiary: #64748b;
+        --border: #334155;
+        --accent: #60a5fa;
+        --gradient-start: #60a5fa;
+        --gradient-end: #a855f7;
+        --font-family: 'Inter', system-ui, -apple-system, sans-serif;
     }
     
+    /* Base Homepage Styling */
+    .homepage {
+        background: var(--bg-dark);
+        color: var(--text-main);
+        font-family: var(--font-family);
+        padding: 2rem 1.5rem 4rem;
+        min-height: 100vh;
+    }
+    
+    /* Hero Section */
     .hero-section {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -219,6 +150,8 @@
         align-items: center;
         padding: 4rem 0;
         min-height: 85vh;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     
     .hero-content {
@@ -241,25 +174,13 @@
         align-items: center;
         gap: 0.5rem;
         padding: 0.5rem 1rem;
-        background: rgba(10, 132, 255, 0.1);
-        border: 1px solid rgba(10, 132, 255, 0.3);
+        background: rgba(37, 99, 235, 0.2);
+        border: 1px solid rgba(37, 99, 235, 0.3);
         border-radius: 100px;
-        color: var(--color-primary);
+        color: var(--accent);
         font-size: 0.875rem;
         font-weight: 600;
         margin-bottom: 2rem;
-        animation: pulse 2s ease-in-out infinite;
-    }
-    
-    @keyframes pulse {
-        0%, 100% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(10, 132, 255, 0.4);
-        }
-        50% {
-            transform: scale(1.02);
-            box-shadow: 0 0 0 10px rgba(10, 132, 255, 0);
-        }
     }
     
     .badge-icon {
@@ -268,36 +189,25 @@
     }
     
     .hero-title {
-        font-size: 4.5rem;
+        font-size: 4rem;
         font-weight: 800;
         line-height: 1.1;
         margin-bottom: 1.5rem;
         letter-spacing: -0.03em;
-        color: var(--color-text);
+        color: var(--text-main);
     }
     
     .gradient-text {
-        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+        background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        background-size: 200% 200%;
-        animation: gradientShift 3s ease infinite;
-    }
-    
-    @keyframes gradientShift {
-        0%, 100% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
     }
     
     .hero-description {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
         line-height: 1.7;
-        color: var(--color-text-secondary);
+        color: var(--text-muted);
         margin-bottom: 2.5rem;
         max-width: 540px;
     }
@@ -309,12 +219,43 @@
         flex-wrap: wrap;
     }
     
+    .btn {
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        font-family: var(--font-family);
+        transition: all 0.2s;
+        border-radius: 12px;
+    }
+    
     .btn-large {
         padding: 1rem 2rem;
         font-size: 1rem;
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
+    }
+    
+    .btn-primary {
+        background: var(--primary);
+        color: white;
+    }
+    
+    .btn-primary:hover {
+        background: var(--primary-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+    }
+    
+    .btn-secondary {
+        background: var(--bg-card);
+        color: var(--text-main);
+        border: 1px solid var(--border);
+    }
+    
+    .btn-secondary:hover {
+        background: #334155;
+        border-color: var(--primary);
     }
     
     .btn-icon {
@@ -327,8 +268,8 @@
         align-items: center;
         gap: 2rem;
         padding: 2rem;
-        background: var(--color-bg-secondary);
-        border: 1px solid var(--color-border);
+        background: var(--bg-card);
+        border: 1px solid var(--border);
         border-radius: 16px;
         width: fit-content;
     }
@@ -340,7 +281,7 @@
     .stat-number {
         font-size: 2rem;
         font-weight: 800;
-        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+        background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -349,14 +290,14 @@
     
     .stat-label {
         font-size: 0.875rem;
-        color: var(--color-text-tertiary);
+        color: var(--text-tertiary);
         font-weight: 500;
     }
     
     .stat-divider {
         width: 1px;
         height: 40px;
-        background: var(--color-border);
+        background: var(--border);
     }
     
     /* Hero Visual */
@@ -383,7 +324,7 @@
         position: relative;
         width: 320px;
         height: 640px;
-        background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+        background: linear-gradient(135deg, #1e293b, #0f172a);
         border-radius: 40px;
         padding: 12px;
         box-shadow: 
@@ -408,7 +349,7 @@
         transform: translateX(-50%);
         width: 140px;
         height: 30px;
-        background: #1a1a1a;
+        background: #0f172a;
         border-radius: 0 0 20px 20px;
         z-index: 10;
     }
@@ -429,8 +370,8 @@
         height: 100%;
         position: relative;
         background: 
-            linear-gradient(0deg, transparent 24%, rgba(10, 132, 255, 0.05) 25%, rgba(10, 132, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(10, 132, 255, 0.05) 75%, rgba(10, 132, 255, 0.05) 76%, transparent 77%, transparent),
-            linear-gradient(90deg, transparent 24%, rgba(10, 132, 255, 0.05) 25%, rgba(10, 132, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(10, 132, 255, 0.05) 75%, rgba(10, 132, 255, 0.05) 76%, transparent 77%, transparent);
+            linear-gradient(0deg, transparent 24%, rgba(37, 99, 235, 0.05) 25%, rgba(37, 99, 235, 0.05) 26%, transparent 27%, transparent 74%, rgba(37, 99, 235, 0.05) 75%, rgba(37, 99, 235, 0.05) 76%, transparent 77%, transparent),
+            linear-gradient(90deg, transparent 24%, rgba(37, 99, 235, 0.05) 25%, rgba(37, 99, 235, 0.05) 26%, transparent 27%, transparent 74%, rgba(37, 99, 235, 0.05) 75%, rgba(37, 99, 235, 0.05) 76%, transparent 77%, transparent);
         background-size: 20px 20px;
     }
     
@@ -449,8 +390,8 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
-        box-shadow: 0 0 20px var(--color-primary);
+        background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        box-shadow: 0 0 20px var(--primary);
         animation: scanLine 2s ease-in-out infinite;
     }
     
@@ -472,7 +413,7 @@
         position: absolute;
         width: 30px;
         height: 30px;
-        border: 3px solid var(--color-primary);
+        border: 3px solid var(--primary);
         animation: cornerPulse 2s ease-in-out infinite;
     }
     
@@ -524,8 +465,8 @@
         transform: translate(-50%, -50%);
         width: 80px;
         height: 80px;
-        background: rgba(10, 132, 255, 0.1);
-        border: 2px solid var(--color-primary);
+        background: rgba(37, 99, 235, 0.1);
+        border: 2px solid var(--primary);
         border-radius: 8px;
         animation: targetPulse 2s ease-in-out infinite;
     }
@@ -546,8 +487,8 @@
         position: absolute;
         width: 60px;
         height: 60px;
-        background: var(--color-bg-elevated);
-        border: 1px solid var(--color-border);
+        background: var(--bg-card);
+        border: 1px solid var(--border);
         border-radius: 12px;
         display: flex;
         align-items: center;
@@ -558,7 +499,7 @@
     .floating-element svg {
         width: 30px;
         height: 30px;
-        color: var(--color-primary);
+        color: var(--primary);
     }
     
     .element-1 {
@@ -593,7 +534,8 @@
     /* Features Section */
     .features-section {
         padding: 6rem 0;
-        background: linear-gradient(180deg, transparent, rgba(10, 132, 255, 0.02), transparent);
+        max-width: 1200px;
+        margin: 0 auto;
     }
     
     .section-header {
@@ -602,13 +544,24 @@
         animation: fadeInUp 0.8s ease-out;
     }
     
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
     .section-badge {
         display: inline-block;
         padding: 0.5rem 1rem;
-        background: rgba(10, 132, 255, 0.1);
-        border: 1px solid rgba(10, 132, 255, 0.3);
+        background: rgba(37, 99, 235, 0.2);
+        border: 1px solid rgba(37, 99, 235, 0.3);
         border-radius: 100px;
-        color: var(--color-primary);
+        color: var(--accent);
         font-size: 0.875rem;
         font-weight: 600;
         margin-bottom: 1rem;
@@ -621,11 +574,12 @@
         font-weight: 800;
         margin-bottom: 1rem;
         letter-spacing: -0.02em;
+        color: var(--text-main);
     }
     
     .section-description {
         font-size: 1.125rem;
-        color: var(--color-text-secondary);
+        color: var(--text-muted);
         max-width: 600px;
         margin: 0 auto;
     }
@@ -637,14 +591,13 @@
     }
     
     .feature-card {
-        background: var(--color-bg-secondary);
-        border: 1px solid var(--color-border);
+        background: var(--bg-card);
+        border: 1px solid var(--border);
         border-radius: 20px;
         padding: 2.5rem;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
-        animation: fadeInUp 0.8s ease-out both;
     }
     
     .feature-card::before {
@@ -654,14 +607,14 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(10, 132, 255, 0.1), transparent);
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), transparent);
         opacity: 0;
-        transition: opacity 0.4s ease;
+        transition: opacity 0.3s ease;
     }
     
     .feature-card:hover {
         transform: translateY(-8px);
-        border-color: var(--color-primary);
+        border-color: var(--primary);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
     
@@ -670,8 +623,8 @@
     }
     
     .feature-card.featured {
-        border-color: var(--color-primary);
-        background: linear-gradient(135deg, rgba(10, 132, 255, 0.05), var(--color-bg-secondary));
+        border-color: var(--primary);
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), var(--bg-card));
     }
     
     .featured-badge {
@@ -679,7 +632,7 @@
         top: 1rem;
         right: 1rem;
         padding: 0.375rem 0.875rem;
-        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+        background: linear-gradient(135deg, var(--primary), var(--gradient-end));
         color: white;
         border-radius: 100px;
         font-size: 0.75rem;
@@ -691,7 +644,7 @@
     .feature-icon {
         width: 60px;
         height: 60px;
-        background: linear-gradient(135deg, rgba(10, 132, 255, 0.2), rgba(94, 92, 230, 0.2));
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(168, 85, 247, 0.2));
         border-radius: 12px;
         display: flex;
         align-items: center;
@@ -707,20 +660,20 @@
     .feature-icon svg {
         width: 30px;
         height: 30px;
-        color: var(--color-primary);
+        color: var(--primary);
     }
     
     .feature-title {
         font-size: 1.5rem;
         font-weight: 700;
         margin-bottom: 1rem;
-        color: var(--color-text);
+        color: var(--text-main);
     }
     
     .feature-description {
         font-size: 1rem;
         line-height: 1.6;
-        color: var(--color-text-secondary);
+        color: var(--text-muted);
         margin-bottom: 1.5rem;
     }
     
@@ -732,10 +685,10 @@
     
     .feature-tag {
         padding: 0.375rem 0.875rem;
-        background: rgba(10, 132, 255, 0.1);
-        border: 1px solid rgba(10, 132, 255, 0.3);
+        background: rgba(37, 99, 235, 0.1);
+        border: 1px solid rgba(37, 99, 235, 0.3);
         border-radius: 100px;
-        color: var(--color-primary);
+        color: var(--accent);
         font-size: 0.75rem;
         font-weight: 600;
     }
@@ -743,12 +696,13 @@
     /* CTA Section */
     .cta-section {
         position: relative;
-        margin: 6rem 0;
+        margin: 6rem auto;
         padding: 5rem 3rem;
-        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-        border-radius: 32px;
+        background: linear-gradient(135deg, var(--primary), var(--gradient-end));
+        border-radius: 24px;
         overflow: hidden;
         text-align: center;
+        max-width: 1200px;
     }
     
     .cta-content {
@@ -757,7 +711,7 @@
     }
     
     .cta-title {
-        font-size: 3.5rem;
+        font-size: 3rem;
         font-weight: 800;
         color: white;
         margin-bottom: 1rem;
@@ -765,7 +719,7 @@
     }
     
     .cta-description {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
         color: rgba(255, 255, 255, 0.9);
         margin-bottom: 2.5rem;
         max-width: 600px;
@@ -782,7 +736,7 @@
     
     .cta-section .btn-primary {
         background: white;
-        color: var(--color-primary);
+        color: var(--primary);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
     
@@ -829,14 +783,6 @@
         }
     }
     
-    /* Staggered Animations */
-    .features-grid .feature-card:nth-child(1) { animation-delay: 0.1s; }
-    .features-grid .feature-card:nth-child(2) { animation-delay: 0.2s; }
-    .features-grid .feature-card:nth-child(3) { animation-delay: 0.3s; }
-    .features-grid .feature-card:nth-child(4) { animation-delay: 0.4s; }
-    .features-grid .feature-card:nth-child(5) { animation-delay: 0.5s; }
-    .features-grid .feature-card:nth-child(6) { animation-delay: 0.6s; }
-    
     /* Responsive Design */
     @media (max-width: 1024px) {
         .hero-section {
@@ -852,7 +798,7 @@
         }
         
         .hero-title {
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
         
         .hero-description {
@@ -871,6 +817,10 @@
         .floating-element {
             display: none;
         }
+        
+        .section-title {
+            font-size: 2.5rem;
+        }
     }
     
     @media (max-width: 768px) {
@@ -879,13 +829,14 @@
         }
         
         .hero-description {
-            font-size: 1.125rem;
+            font-size: 1rem;
         }
         
         .hero-stats {
             flex-direction: column;
             gap: 1.5rem;
             padding: 1.5rem;
+            width: 100%;
         }
         
         .stat-divider {
@@ -913,6 +864,34 @@
         .btn-large {
             width: 100%;
             justify-content: center;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .homepage {
+            padding: 1rem 1rem 3rem;
+        }
+        
+        .hero-title {
+            font-size: 2rem;
+        }
+        
+        .hero-section {
+            padding: 2rem 0;
+            min-height: auto;
+        }
+        
+        .phone-mockup {
+            width: 240px;
+            height: 480px;
+        }
+        
+        .section-title {
+            font-size: 1.75rem;
+        }
+        
+        .feature-card {
+            padding: 2rem;
         }
     }
 </style>
