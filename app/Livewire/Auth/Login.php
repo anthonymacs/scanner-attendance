@@ -2,10 +2,11 @@
 
 namespace App\Livewire\Auth;
 
+use Livewire\Attributes\Layout;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Validate;
-
+#[Layout('components.layouts.app')]
 class Login extends Component
 {
     #[Validate('required|email', message: 'Please enter a valid work email')]

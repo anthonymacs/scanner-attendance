@@ -18,15 +18,24 @@
                 The most powerful QR code and barcode scanner. Fast, accurate, and beautifully designed 
                 for modern workflows.
             </p>
-            
-            <div class="hero-buttons">
-                <button class="btn btn-primary btn-large">
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2m0 10v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/>
-                        <rect x="7" y="7" width="10" height="10" rx="1"/>
-                    </svg>
-                    Sign Up
-                </button>
+           <div class="hero-buttons">
+    <button class="btn btn-primary btn-large">
+        <a href="{{ route('register') }}" class="btn btn-secondary btn-large"></a>
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2m0 10v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/>
+            <rect x="7" y="7" width="10" height="10" rx="1"/>
+        </svg>
+        Sign Up
+    </button>
+    <a href="{{ route('login') }}" class="btn btn-secondary btn-large">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+            <polyline points="10 17 15 12 10 7"/>
+            <line x1="15" y1="12" x2="3" y2="12"/>
+        </svg>
+        Log In
+    </a>
+</div>
                 <button class="btn btn-secondary btn-large">
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polygon points="5 3 19 12 5 21 5 3"/>
