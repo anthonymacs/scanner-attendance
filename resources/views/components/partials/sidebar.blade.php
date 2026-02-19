@@ -1,107 +1,114 @@
 <!-- Mobile Overlay -->
-<div x-show="sidebarOpen" 
-     @click="sidebarOpen = false" 
-     class="sidebar-overlay" 
-     style="display: none;"
-     aria-hidden="true">
+<div x-show="sidebarOpen && window.innerWidth < 768"
+     @click="sidebarOpen = false"
+     class="sidebar-overlay"
+     style="display: none;">
 </div>
 
 <!-- Sidebar -->
-<aside x-show="sidebarOpen" 
-       x-transition:enter="transition ease-in-out duration-300 transform"
-       x-transition:enter-start="-translate-x-full" 
-       x-transition:enter-end="translate-x-0"
-       x-transition:leave="transition ease-in-out duration-300 transform" 
-       x-transition:leave-start="translate-x-0"
-       x-transition:leave-end="-translate-x-full" 
-       :class="sidebarCollapsed ? 'sidebar-collapsed' : 'sidebar-expanded'"
-       class="app-sidebar"
-       style="display: none;">
+<aside :class="sidebarCollapsed ? 'sidebar-collapsed' : 'sidebar-expanded'"
+       class="app-sidebar">
 
     <!-- Sidebar Header -->
     <div class="sidebar-header">
         <div class="sidebar-logo">
-            <div class="logo-wrapper">
-                <img src="{{ asset('images/logo.jpg') }}" 
-                     alt="EVSU Logo" 
-                     class="logo-image">
+            <div class="logo-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2m0 10v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/>
+                    <rect x="7" y="7" width="10" height="10" rx="1"/>
+                </svg>
             </div>
-            <div x-show="!sidebarCollapsed" 
-                 x-transition 
-                 class="logo-text">
-                <span class="logo-title">DocHub</span>
-                <span class="logo-subtitle">Document Management</span>
+            <div x-show="!sidebarCollapsed" x-transition class="logo-text-group">
+                <span class="logo-title">Attend<span class="logo-accent">Ease</span></span>
+                <span class="logo-subtitle">Attendance System</span>
             </div>
         </div>
     </div>
 
     <!-- Navigation -->
-    <nav class="sidebar-nav">
-        
-        <!-- Dashboard -->
-        <x-partials.sidebar-link href="{{ route('dashboard.index') }}" route="dashboard*" label="Dashboard">
-            <x-slot:icon>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="3" y="3" width="7" height="7"/>
-                    <rect x="14" y="3" width="7" height="7"/>
-                    <rect x="14" y="14" width="7" height="7"/>
-                    <rect x="3" y="14" width="7" height="7"/>
-                </svg>
-            </x-slot:icon>
-        </x-partials.sidebar-link>
+<nav class="sidebar-nav">
 
-        <!-- Users -->
-        <x-partials.sidebar-link href="{{ route('users.index') }}" route="users.*" label="Users">
-            <x-slot:icon>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 4a4 4 0 110 8 4 4 0 010-8zm-8 16a6 6 0 0116 0" />
-                </svg>
-            </x-slot:icon>
-        </x-partials.sidebar-link>
+    <!-- Dashboard -->
+    <a href="{{ route('dashboard') }}"
+       class="nav-item {{ request()->routeIs('dashboard') ? 'nav-item-active' : '' }}">
+        <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+        </div>
+        <span x-show="!sidebarCollapsed" x-transition class="nav-label">Dashboard</span>
+    </a>
 
-        <!-- Categories -->
-        <x-partials.sidebar-link href="{{ route('categories.index') }}" route="categories.*" label="Categories">
-            <x-slot:icon>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 3h5l7 7-7 7H7L3 12V7a4 4 0 014-4z" />
-                </svg>
-            </x-slot:icon>
-        </x-partials.sidebar-link>
+    <!-- Attendance -->
+    <a href="#" class="nav-item">
+        <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+        </div>
+        <span x-show="!sidebarCollapsed" x-transition class="nav-label">Attendance</span>
+    </a>
 
-        <!-- Upload -->
-        <x-partials.sidebar-link href="{{ route('uploads.index') }}" route="uploads.*" label="Upload">
-            <x-slot:icon>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="17 8 12 3 7 8"/>
-                    <line x1="12" y1="3" x2="12" y2="15"/>
-                </svg>
-            </x-slot:icon>
-        </x-partials.sidebar-link>
+    <!-- QR Scanner -->
+    <a href="#" class="nav-item">
+        <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2m0 10v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/>
+                <rect x="7" y="7" width="10" height="10" rx="1"/>
+            </svg>
+        </div>
+        <span x-show="!sidebarCollapsed" x-transition class="nav-label">QR Scanner</span>
+    </a>
 
-        <!-- Documents -->
-        <x-partials.sidebar-link href="{{ route('documents.index') }}" route="documents.*" label="Documents">
-            <x-slot:icon>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586l5.414 5.414" />
-                </svg>
-            </x-slot:icon>
-        </x-partials.sidebar-link>
+    <!-- Reports -->
+    <a href="#" class="nav-item">
+        <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+        </div>
+        <span x-show="!sidebarCollapsed" x-transition class="nav-label">Reports</span>
+    </a>
 
-        <!-- Divider -->
-        <div x-show="!sidebarCollapsed" class="sidebar-divider"></div>
+    <!-- Users -->
+    <a href="#" class="nav-item">
+        <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm-8 16a8 8 0 1 1 16 0"/>
+            </svg>
+        </div>
+        <span x-show="!sidebarCollapsed" x-transition class="nav-label">Users</span>
+    </a>
 
-        <!-- Settings (Optional) -->
-        <x-partials.sidebar-link href="#" route="settings.*" label="Settings">
-            <x-slot:icon>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="3"/>
-                    <path d="M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24"/>
-                </svg>
-            </x-slot:icon>
-        </x-partials.sidebar-link>
+    <!-- Audit Trail -->
+    <a href="#" class="nav-item">
+        <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 8v4l3 3"/>
+                <circle cx="12" cy="12" r="9"/>
+            </svg>
+        </div>
+        <span x-show="!sidebarCollapsed" x-transition class="nav-label">Audit Trail</span>
+    </a>
 
-    </nav>
+    <!-- Settings -->
+    <a href="#" class="nav-item">
+        <div class="nav-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+            </svg>
+        </div>
+        <span x-show="!sidebarCollapsed" x-transition class="nav-label">Settings</span>
+    </a>
+
+</nav>
 
     <!-- Sidebar Footer -->
     <div class="sidebar-footer">
@@ -114,17 +121,12 @@
                 <polyline points="13 17 18 12 13 7"/>
                 <polyline points="6 17 11 12 6 7"/>
             </svg>
-            <span x-show="!sidebarCollapsed">Collapse</span>
+            <span x-show="!sidebarCollapsed" x-transition>Collapse</span>
         </button>
-        
-        <div x-show="!sidebarCollapsed" x-transition class="footer-info">
-            <p class="footer-text">Version 1.0.0</p>
-        </div>
     </div>
 </aside>
 
 <style>
-    /* Design Tokens */
     :root {
         --primary: #2563eb;
         --primary-hover: #1d4ed8;
@@ -132,30 +134,19 @@
         --bg-card: #1e293b;
         --text-main: #f8fafc;
         --text-muted: #94a3b8;
-        --text-tertiary: #64748b;
         --border: #334155;
-        --accent: #60a5fa;
         --sidebar-width: 280px;
         --sidebar-collapsed-width: 80px;
         --font-family: 'Inter', system-ui, -apple-system, sans-serif;
     }
 
-    /* Sidebar Overlay (Mobile) */
     .sidebar-overlay {
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(4px);
+        background: rgba(0,0,0,0.5);
         z-index: 25;
     }
 
-    @media (min-width: 768px) {
-        .sidebar-overlay {
-            display: none !important;
-        }
-    }
-
-    /* Sidebar Container */
     .app-sidebar {
         position: fixed;
         top: 0;
@@ -165,48 +156,16 @@
         border-right: 1px solid var(--border);
         display: flex;
         flex-direction: column;
-        overflow-y: auto;
-        overflow-x: hidden;
         transition: width 0.3s ease;
         z-index: 30;
-        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
         font-family: var(--font-family);
     }
 
-    .sidebar-expanded {
-        width: var(--sidebar-width);
-    }
+    .sidebar-expanded { width: var(--sidebar-width); }
+    .sidebar-collapsed { width: var(--sidebar-collapsed-width); }
 
-    .sidebar-collapsed {
-        width: var(--sidebar-collapsed-width);
-    }
-
-    @media (min-width: 768px) {
-        .app-sidebar {
-            position: static;
-            display: flex !important;
-        }
-    }
-
-    /* Custom Scrollbar */
-    .app-sidebar::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    .app-sidebar::-webkit-scrollbar-track {
-        background: transparent;
-    }
-
-    .app-sidebar::-webkit-scrollbar-thumb {
-        background: var(--border);
-        border-radius: 3px;
-    }
-
-    .app-sidebar::-webkit-scrollbar-thumb:hover {
-        background: var(--text-tertiary);
-    }
-
-    /* Sidebar Header */
+    /* Header */
     .sidebar-header {
         padding: 1.5rem;
         border-bottom: 1px solid var(--border);
@@ -216,26 +175,24 @@
     .sidebar-logo {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 0.75rem;
     }
 
-    .logo-wrapper {
-        width: 48px;
-        height: 48px;
-        flex-shrink: 0;
-        position: relative;
-    }
-
-    .logo-image {
-        width: 100%;
-        height: 100%;
+    .logo-icon-box {
+        width: 44px;
+        height: 44px;
+        background: linear-gradient(135deg, #2563eb, #a855f7);
         border-radius: 12px;
-        object-fit: cover;
-        border: 2px solid rgba(37, 99, 235, 0.3);
-        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        flex-shrink: 0;
     }
 
-    .logo-text {
+    .logo-icon-box svg { width: 22px; height: 22px; }
+
+    .logo-text-group {
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -245,33 +202,74 @@
         font-size: 1.25rem;
         font-weight: 800;
         color: var(--text-main);
-        line-height: 1.2;
-        background: linear-gradient(135deg, var(--primary), #a855f7);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        white-space: nowrap;
     }
+
+    .logo-accent { color: #60a5fa; }
 
     .logo-subtitle {
         font-size: 0.75rem;
         color: var(--text-muted);
-        line-height: 1.2;
+        white-space: nowrap;
     }
 
-    /* Sidebar Navigation */
+    /* Nav */
     .sidebar-nav {
         flex: 1;
         padding: 1rem 0.75rem;
         overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
     }
 
-    .sidebar-divider {
+    .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 0.875rem;
+        padding: 0.75rem;
+        border-radius: 12px;
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+        white-space: nowrap;
+    }
+
+    .nav-item:hover {
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--text-main);
+    }
+
+    .nav-item-active {
+        background: rgba(37, 99, 235, 0.15);
+        color: #60a5fa;
+        border: 1px solid rgba(37, 99, 235, 0.2);
+    }
+
+    .nav-icon {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border-radius: 8px;
+    }
+
+    .nav-icon svg { width: 20px; height: 20px; }
+
+    .nav-label { flex: 1; }
+
+    .nav-divider {
         height: 1px;
         background: var(--border);
-        margin: 1rem 0.5rem;
+        margin: 0.5rem 0.25rem;
     }
 
-    /* Sidebar Footer */
+    /* Footer */
     .sidebar-footer {
         padding: 1rem;
         border-top: 1px solid var(--border);
@@ -288,48 +286,29 @@
         background: rgba(37, 99, 235, 0.1);
         border: 1px solid rgba(37, 99, 235, 0.2);
         border-radius: 10px;
-        color: var(--primary);
+        color: #60a5fa;
         font-size: 0.875rem;
         font-weight: 600;
         font-family: var(--font-family);
         cursor: pointer;
         transition: all 0.2s;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .collapse-btn:hover {
         background: rgba(37, 99, 235, 0.2);
-        border-color: var(--primary);
     }
 
-    .collapse-btn svg {
-        width: 18px;
-        height: 18px;
-    }
+    .collapse-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
 
-    .footer-info {
-        margin-top: 0.75rem;
-        text-align: center;
-    }
-
-    .footer-text {
-        font-size: 0.75rem;
-        color: var(--text-tertiary);
-        margin: 0;
-    }
-
-    /* Responsive Adjustments */
     @media (max-width: 767px) {
-        .sidebar-header {
-            padding: 1rem;
+        .app-sidebar {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease, width 0.3s ease;
         }
-
-        .logo-wrapper {
-            width: 40px;
-            height: 40px;
-        }
-
-        .logo-title {
-            font-size: 1.125rem;
+        .app-sidebar.sidebar-expanded {
+            transform: translateX(0);
         }
     }
 </style>

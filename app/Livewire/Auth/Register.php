@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Livewire\Dashboard;
+namespace App\Livewire\Auth;
 
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 #[Layout('components.layouts.app')]
-class Index extends Component
+class Register extends Component
 {
     public function render()
     {
-        return view('livewire.dashboard.index');
+        return view('livewire.auth.register');
     }
 }
